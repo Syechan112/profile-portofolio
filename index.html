@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Minimalis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="/assets/image/profile/sean.png" type="image/x-icon">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav x-data="{ open: false }" class="fixed w-full z-50 transition-all duration-300" :class="{'bg-black/80 backdrop-blur-md': !open, 'bg-black': open}">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-white font-bold text-xl">Personal Portofolio</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#hero" class="nav-link text-white hover:text-gray-300">Home</a>
+                        <a href="#about" class="nav-link text-white hover:text-gray-300">About</a>
+                        <a href="#projects" class="nav-link text-white hover:text-gray-300">Projects</a>
+                        <a href="#contact" class="nav-link text-white hover:text-gray-300">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div x-show="open" class="md:hidden" x-transition>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="profile-container mb-8 reveal">
+                    <img src="/assets/image/profile/sean.png" alt="Profile" class="profile-img">
+                </div>
+                <h1 class="md:text-5xl text-2xl font-bold mb-4 reveal">Syechan Mochsin Al-thubaiti</h1>
+                <p class="md:text-xl text-md text-gray-300 mb-8 reveal">Fullstack Developer | UI/UX Designer.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 reveal">
+                    <a href="#projects" class="px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition-all duration-300">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border border-white text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+<section id="about" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center reveal">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Saya adalah seorang Fullstack Developer dan UI/UX Designer yang berpengalaman dalam menciptakan antarmuka yang elegan, interaktif dan fungsional.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-8">
+                        Dengan fokus pada pengalaman pengguna dan kode yang bersih, saya menciptakan solusi digital yang memukau dan efisien.
+                    </p>
+                    <div class="space-y-4 reveal">
+                        <div>
+                            <h4 class="text-lg font-medium text-white mb-2">Skills</h4>
+                            <div class="flex flex-wrap gap-2">
+                              <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span> 
+                              <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">CSS3</span>
+                              <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">JavaScript</span>
+                              <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">HTML5</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Laravel</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Alpine</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Tailwind</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">SQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-white mb-2">Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">VS Code</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Figma</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Git</span>
+                                <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-7 reveal">
+                        <a href="/assets/doc/Syehan Mochsin Althubaiti.pdf" download class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.707 7.404c-.189-.188-.448-.283-.707-.283s-.518.095-.707.283L13 9.697V3a1 1 0 0 0-2 0v6.697L8.707 7.404a.997.997 0 0 0-1.414 0a1 1 0 0 0 0 1.414L12 13.5l4.709-4.684a1 1 0 0 0-.002-1.412zM20.987 16a.98.98 0 0 0-.039-.316l-2-6A.998.998 0 0 0 18 9h-.219c-.094.188-.21.368-.367.525L15.932 11h1.348l1.667 5H5.054l1.667-5h1.348L6.586 9.525A1.96 1.96 0 0 1 6.219 9H6a.998.998 0 0 0-.948.684l-2 6a.98.98 0 0 0-.039.316C3 16 3 21 3 21a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1s0-5-.013-5z"/>
+                            </svg>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div x-data="imageCarousel()" class="relative h-80 overflow-hidden rounded-lg shadow-xl">
+                        <!-- Gambar pertama -->
+                        <div class="absolute inset-0 transition-transform duration-500 ease-in-out" 
+                             :class="{'translate-x-0': currentSlide === 0, '-translate-x-full': currentSlide === 1}">
+                            <img src="/assets/image/profile/sean.png" alt="About 1" class="w-full w-full h-full object-cover object-bottom" style="object-position: 0 -20px;">
+                        </div>
+                        <!-- Gambar kedua -->
+                        <div class="absolute inset-0 transition-transform duration-500 ease-in-out" 
+                             :class="{'translate-x-full': currentSlide === 0, 'translate-x-0': currentSlide === 1}">
+                            <img src="/assets/image/profile/seans2.jpg" alt="About 2" class="w-full h-full object-cover object-bottom" style="object-position: 0 -20px;">
+                        </div>
+                        
+                        <!-- Indikator -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            <button @click="currentSlide = 0" 
+                                    :class="{'bg-white': currentSlide === 0, 'bg-gray-600': currentSlide !== 0}"
+                                    class="w-3 h-3 rounded-full"></button>
+                            <button @click="currentSlide = 1" 
+                                    :class="{'bg-white': currentSlide === 1, 'bg-gray-600': currentSlide !== 1}"
+                                    class="w-3 h-3 rounded-full"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center reveal">Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl reveal">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Vendor Procurement System (API)</h3>
+                            <p class="text-gray-400 mb-4">Website yang di bagun untuk membuat sebuah toko per vendor, dengan tambahkan fitur role based yang di bangun menggunakan laravel.</p>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/Syechan112/vendor-procurement-system.git" target="_blank" class="text-white hover:text-gray-300">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl reveal">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Blog Post</h3>
+                            <p class="text-gray-400 mb-4">Web blog post menggunakan laravel serta menggunakan tailwind untuk style nya, menggunakan sistem crud dan role based</p>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/Syechan112/blog-post.git" target="_blank" class="text-white hover:text-gray-300">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl reveal">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Landing Page Coffe Shop</h3>
+                            <p class="text-gray-400 mb-4">Website landing page coffe shop menggunakan html dan tailwind css, untuk menunjukan hasil project kecil saya.</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-white hover:text-gray-300">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="https://github.com/Syechan112" target="_blank" class="inline-block px-6 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-md hover:bg-gray-700 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-700">
+                        View All
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center reveal">Contact</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="reveal">
+                        <h3 class="text-2xl font-semibold mb-6">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-white mr-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Email</h4>
+                                    <p class="text-gray-400">syechanmochsinalthubaiti@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-white mr-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Phone</h4>
+                                    <p class="text-gray-400">+62 897-9673-149</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-white mr-4">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-white mb-1">Location</h4>
+                                    <p class="text-gray-400">Banten, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="reveal">
+                    <form id="contactForm" class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-6">Send Message</h3>
+                        <div class="mb-6">
+                            <label class="block text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white transition-colors" placeholder="Your Name">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white transition-colors" placeholder="Your Email">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white transition-colors" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-black font-medium py-3 rounded-lg hover:bg-gray-200 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <span class="text-white font-bold text-xl">Syechan Mochsin Al-thubaiti</span>
+                        <p class="text-gray-400 mt-2">Fullstack Developer & UI/UX Designer</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#hero" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                        <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+                        <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500">© 2025 Syechan Mochsin Althubaiti. All rights reserved.</p>
+                    <div class="mt-4 md:mt-0">
+                        <p class="text-gray-500">Designed with <span class="text-white">❤️</span> using Tailwind CSS & Alpine.js</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
