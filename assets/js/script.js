@@ -47,7 +47,7 @@ function imageCarousel() {
             }
             
             // Format pesan untuk WhatsApp
-            const whatsappMessage = `Halo, saya ${name}\n${email}\n${message}`;
+            const whatsappMessage = `Halo, saya ${name}.\n\n${message}.\n\n${email}`;
             
             // Ganti dengan nomor WhatsApp Anda (format internasional)
             const phoneNumber = "+628979673149";
